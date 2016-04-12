@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="css\main.css" />
+
+    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+        crossorigin="anonymous"></script>
+
+    <script>
+        function doFooFunction() {
+            alert('test');
+        }
+        
+        var apiKey2 = "http://quotesondesign.com/api/3.0/api-3.0.json?callback=";
+        var apiKey = "http://api.icndb.com/jokes/random?limitTo=nerdy";
+        
+        $(document).ready(function(){
+            $.getJSON( apiKey, function( data ) {
+            var items = [];
+            $.each( data.value, function( key, val ) {
+                items.push( "<li id='" + key + "'>" + val + "</li>" );
+            });
+            
+            $( "<ul/>", {
+                "class": "my-new-list",
+                html: items.join( "" )
+            }).appendTo( "#quote" );
+            });
+        $("#newQuote").on( "click", function() {
+            console.log( $( this ).text() );
+            
+            $("#quote").empty();
+            
+            $.getJSON( apiKey, function( data ) {
+            var items = [];
+            $.each( data.value, function( key, val ) {
+                items.push( "<li id='" + key + "'>" + key + " - " + val + "</li>" );
+            });
+            
+            $( "<ul/>", {
+                "class": "my-new-list",
+                html: items.join( "" )
+            }).appendTo( "#quote" );
+            });
+        });
+      });
+        
+      
+    </script>
+</head>
+
+<body>
+    <div class="container">
+    <div id="quote"></div>
+    
+    <button id="newQuote" type="button" class="btn btn-primary">new quote</button>
+    </div>
+    
+</body>
+
+</html>
