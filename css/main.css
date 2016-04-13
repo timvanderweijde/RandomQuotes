@@ -3,3 +3,14 @@ body {
     font-family: "PT Sans", "Arial", Helvetica, sans-serif;
     font-size: 30px;
 }
+
+#quote::before {
+    font-size: 44px;
+    content: "\201c ";
+}
+
+#quote::after {
+    font-size: 44px;
+    content: " \201e";
+}
+
