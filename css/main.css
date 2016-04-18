@@ -7,9 +7,25 @@ body {
 
 #quote {
     height: 100%;
+    
+    -webkit-animation-duration: 0.7s;
+    -webkit-animation-delay: 0s;
+    animation-duration: 0.7s;
+    animation-delay: 0s;
 }
 .btn.btn-primary {
     background-color: dodgerblue;
+}
+
+.row.button {
+    padding-bottom: 15px;
+}
+
+.alignleft {
+	float: left;
+}
+.alignright {
+	float: right;
 }
 
 .quote-pre {
@@ -23,17 +39,35 @@ body {
              margin-left: -2%;
 }
 
+.quote-author {
+    font-size: 16px;
+    font-style: italic;
+    padding-top: 5px;
+    padding-right: 30px;
+}
+
 .quote-post {
      font-size: 84px;
             /*content: "\201c ";*/
              color: dodgerblue;
              line-height: 0px;
              /*top: 10px;*/
-             margin-top: -33px;
+             margin-top: -30px;
              margin-bottom: 20px;
              margin-left: 95%;
 }
 
+.fa {
+    font-size: 18px;
+}
+
+#tweet-quote, #newQuote {
+    font-size: 16px;
+}
+
+.cp {
+    font-size:12px;
+}
 @media only screen and (min-width:768px){
 
 .quote-pre {

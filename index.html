@@ -6,36 +6,53 @@
     <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
         crossorigin="anonymous">
-    <link rel="stylesheet" href="css\main.css" />
 
     <script src="https://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
         crossorigin="anonymous"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-hQpvDQiCJaD2H465dQfA717v7lu5qHWtDbWNPvaTJ0ID5xnPUlVXnKzq7b8YUkbN"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css">
+
+    <script type="text/javascript" async src="https://platform.twitter.com/widgets.js"></script>
+
+    <link rel="stylesheet" href="css\main.css" />
 
     <script src=".\js\main.js">
 
     </script>
+
 </head>
 
 <body>
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1>Chuck Norris random quote machine</h1>
+                <h1>Random Chuck Norris quotes</h1>
+            </div>
+        </div>
+        <div class="row button">
+            <div class="col-md-12">
+                <button id="newQuote" type="button" class="btn btn-primary alignleft"><i class="fa fa-refresh" aria-hidden="true"></i>&nbsp;&nbsp;new quote</button>
+                <a id="tweet-quote" target="_blank" href="#" class="btn btn-primary alignright" role="button"><i class="fa fa-twitter"></i>&nbsp;&nbsp;share</a>
+                <div style="clear: both;"></div>
             </div>
         </div>
         <div class="row">
             <div class="col-md-12">
                 <div class="jumbotron">
                     <div class="quote-pre">&ldquo;</div>
-                    <div id="quote"></div>
+                    <div id="quote" class=""></div>
+                    <div class="quote-author text-right">~ a Chuck Norris fan ~</div>
                     <div class="quote-post">&bdquo;</div>
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-5">
-                <button id="newQuote" type="button" class="btn btn-primary">new quote</button>
+            <div class="col-md-12 text-center cp">
+                <hr/>
+                <p>Copyright &copy; 2016 <a href="http://www.bluecape.nl/" target="_blank">Tim van der Weijde</a>. All rights
+                    reserved.</p>
             </div>
         </div>
     </div>
